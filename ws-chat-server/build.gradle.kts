@@ -4,4 +4,10 @@
 
 plugins {
     id("learninggradle.kotlin-library-conventions")
+    id("io.ktor.plugin") version "2.3.6"
+}
+
+dependencies {
+    implementation("io.ktor:ktor-server-core")
+    implementation("io.ktor:ktor-server-netty")
 }
