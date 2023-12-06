@@ -8,6 +8,12 @@ plugins {
 }
 
 dependencies {
-    implementation("io.ktor:ktor-server-core")
-    implementation("io.ktor:ktor-server-netty")
+    implementation("io.ktor:ktor-server-websockets")
+//    implementation("io.ktor:ktor-server-core")
+//    implementation("io.ktor:ktor-server-netty")
+}
+
+application {
+//    mainClass.set("com.example.ApplicationKt")   // when Ktor embeddedServer is used
+    mainClass.set("io.ktor.server.netty.EngineMain")
 }

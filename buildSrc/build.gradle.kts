@@ -5,6 +5,7 @@
 plugins {
     // Support convention plugins written in Kotlin. Convention plugins are build scripts in 'src/main' that automatically become available as plugins in the main build.
     `kotlin-dsl`
+//    id("io.ktor.plugin") version "2.3.6"
 }
 
 repositories {
