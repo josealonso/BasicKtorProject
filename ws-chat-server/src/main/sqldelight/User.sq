@@ -1,0 +1,25 @@
+import java.util.List;
+
+CREATE TABLE messages (
+  id INTEGER PRIMARY KEY NOT NULL,
+  ts TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  sender TEXT NOT NULL,
+  receiver TEXT NOT NULL,
+  content TEXT
+);
+
+insert:
+INSERT INTO messages(id, ts, sender, receiver, content)
+VALUES (?, CURRENT_TIMESTAMP, ?, ?, ?);
+
+selectMessagesBySender:
+SELECT *
+FROM messages
+WHERE sender LIKE :chosenSender
+ORDER BY ts DESC;
+
+selectMessagesByReceiver:
+SELECT *
+FROM messages
+WHERE receiver LIKE :chosenReceiver
+ORDER BY ts DESC;
