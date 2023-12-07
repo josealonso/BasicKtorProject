@@ -16,6 +16,7 @@ dependencies {
     implementation("io.ktor:ktor-server-core")
     implementation("io.ktor:ktor-server-netty")
     implementation("app.cash.sqldelight:jdbc-driver:$sqldelightVersion")
+    implementation("com.zaxxer:HikariCP:5.1.0")
 }
 
 application {

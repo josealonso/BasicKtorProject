@@ -18,6 +18,8 @@ fun Application.module() {
         masking = false
     }
 
+    initDatabase(environment.config)    // TODO
+
     val connections = Collections.synchronizedSet<MyConnection>(LinkedHashSet())
 
     routing {
